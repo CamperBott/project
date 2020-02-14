@@ -37,23 +37,25 @@
       <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
     </div>
   </div>
-
-  @foreach($articles as $article)
-
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
+
+  @foreach($articles as $article)
+
       <div class="col-md-4">
-        <h2>{{$articles->title}}</h2>
-        <p>{{$articles->description}}</p>
+        <h2>{{$article->title}}</h2>
+        <p><img src='{{$article->img}}'></p>
+        <p>{{$article->description}}</p>
+        <p>{{$article->text}}</p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
+
+  @endforeach
+
     </div>
     <hr>
   </div> <!-- /container -->
-
-  @endforeach
-  
 </main>
 <footer class="container">
   <p>&copy; 2020 Company, Inc.</p>
