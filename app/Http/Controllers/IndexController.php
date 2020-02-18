@@ -16,6 +16,9 @@ class IndexController extends Controller
         return view('index')->with(['hw'=>$hw, 
                                     'ms'=>$ms, 
                                     'articles'=>$articles]);
-        
+    }
+
+    public function page1(){
+        return view('page1');
     }
 }
