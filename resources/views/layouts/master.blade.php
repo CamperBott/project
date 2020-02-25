@@ -18,7 +18,7 @@
       </div>
       <div class="links">
         <a href="page1">Page1</a>
-        <a href="#">Page2</a>
+        <a href="/page/add">AddItem</a>
         <a href="#">Page3</a>
         <a href="#">Page4</a>
         <a href="#">Page5</a>
@@ -28,11 +28,20 @@
     </div>
   </nav>
 
-  @yield('content')
+  @if(count($errors)>0)
+  <div class="alert alert-danger">
+    <ul>
+      @foreach($errors->all() as $error)
+      <li>{{$error}}</li>
+      @endforeach
+    </ul>
+    @endif
 
-  <footer class="container">
-    <p>&copy; 2020 Company, Inc.</p>
-  </footer>
+    @yield('content')
+
+    <footer class="container">
+      <p>&copy; 2020 Company, Inc.</p>
+    </footer>
 </body>
 
 </html>

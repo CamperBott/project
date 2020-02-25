@@ -38,5 +38,23 @@ class IndexController extends Controller
                                             'article'=>$article
                                             ]);
     }
+
+    public function add(){
+        return view('add-content')->with(['hw'=>$this->hw, 'ms'=>$this->ms]);
+    }
+
+    public function store(Request $request){
+        echo $request;
+        $this->validate($request, ['title'=>'required | max:25',
+                                    'description'=>'required',
+                                    'text'=>'required',
+                                    'img'=>'required']);
+        $data = $request->all();
+        $article = new Article;
+        $article -> fill($data);
+        $article -> save();
+
+        return redirect('/');
+    }
     
 }
