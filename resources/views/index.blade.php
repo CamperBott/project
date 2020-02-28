@@ -18,7 +18,7 @@
       <div class="col-md-4">
         <h2>{{$article->title}}</h2>
         <p><img src='{{$article->img}}'></p>
-        <p>{{$article->description}} | ID - {{$article->id}}</p>
+        <p>{{$article->description}}</p>
         <p>{{$article->text}}</p>
         <p><a class="btn btn-secondary" href="{{route('articleShow', ['id'=>$article->id])}}" role="button">View details &raquo;</a></p>
       </div>

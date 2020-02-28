@@ -22,3 +22,11 @@ Route::get('article/{id}', 'IndexController@show')->name('articleShow');
 Route::get('page/add', 'IndexController@add');
 
 Route::post('page/add', 'IndexController@store')->name('articleStore');
+
+Route::delete('page/delete/{article}', function (\App\Article $article) {
+    $article->delete();
+    return redirect('admin');
+})->name('articleDelete');
+
+Route::get('admin', 'IndexController@admin');
+

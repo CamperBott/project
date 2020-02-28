@@ -22,8 +22,8 @@
         <a href="#">Page3</a>
         <a href="#">Page4</a>
         <a href="#">Page5</a>
-        <a href="#">Page6</a>
-        <a href="#">Page7</a>
+        <a href="admin">Admin</a>
+        <a href="#">Log In</a>
       </div>
     </div>
   </nav>
