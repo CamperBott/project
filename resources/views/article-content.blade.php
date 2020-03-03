@@ -21,6 +21,7 @@
 
             <div class="articleind">
                 <h2>{{$article->title}}</h2>
+                <p>{{$article->description}}</p>
                 <p>{!!$article->text!!}</p>
             </div>
 

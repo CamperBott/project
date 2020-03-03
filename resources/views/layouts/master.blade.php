@@ -11,10 +11,10 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">Home page</a>
+        <a class="navbar-brand" href="/"><img src="/img/logo.png" alt="Hermes" style="width:100px;"></a>
       </div>
       <div class="links">
         <a href="page1">Page1</a>
