@@ -30,3 +30,4 @@ Route::delete('page/delete/{article}', function (\App\Article $article) {
 
 Route::get('admin', 'IndexController@admin');
 
+Route::resource('articles', 'ArticleController');
