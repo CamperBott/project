@@ -1,12 +1,12 @@
 <?php
-   
+
 namespace App\Http\Controllers;
-   
+
 use App\Article;
 use Illuminate\Http\Request;
 use Redirect;
 use PDF;
-   
+
 class ArticleController extends Controller
 {
     /**
@@ -16,11 +16,11 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $data['articles'] = Article::orderBy('id','desc')->paginate(10);
-   
-        return view('article.list',$data);
+        $data['articles'] = Article::orderBy('id', 'desc')->paginate(10);
+
+        return view('article.list', $data);
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -30,7 +30,7 @@ class ArticleController extends Controller
     {
         return view('article.create');
     }
-   
+
     /**
      * Store a newly created resource in storage.
      *
@@ -42,16 +42,16 @@ class ArticleController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'text' => 'required',            
-
+            'text' => 'required',
+            'img' => 'required'
         ]);
-   
+
         Article::create($request->all());
-    
+
         return Redirect::to('articles')
-       ->with('success','Greate! Article created successfully.');
+            ->with('success', 'Greate! Article created successfully.');
     }
-    
+
     /**
      * Display the specified resource.
      *
@@ -60,9 +60,8 @@ class ArticleController extends Controller
      */
     public function show(Request $request)
     {
-         
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -70,13 +69,13 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {   
+    {
         $where = array('id' => $id);
         $data['article_info'] = Article::where($where)->first();
- 
+
         return view('article.edit', $data);
     }
-   
+
     /**
      * Update the specified resource in storage.
      *
@@ -90,15 +89,16 @@ class ArticleController extends Controller
             'title' => 'required',
             'description' => 'required',
             'text' => 'required',
+            'img' => 'required'
         ]);
-         
-     $update = ['title' => $request->title, 'description' => $request->description,'text' => $request->text];
-        Article::where('id',$id)->update($update);
-   
+
+        $update = ['title' => $request->title, 'description' => $request->description, 'text' => $request->text, 'img' => $request->img];
+        Article::where('id', $id)->update($update);
+
         return Redirect::to('articles')
-       ->with('success','Great! Article updated successfully');
+            ->with('success', 'Great! Article updated successfully');
     }
-   
+
     /**
      * Remove the specified resource from storage.
      *
@@ -107,9 +107,8 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        Article::where('id',$id)->delete();
-   
-        return Redirect::to('articles')->with('success','Article deleted successfully');
+        Article::where('id', $id)->delete();
+
+        return Redirect::to('articles')->with('success', 'Article deleted successfully');
     }
-     
 }
