@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2020 at 07:50 AM
+-- Generation Time: Mar 10, 2020 at 01:24 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -33,10 +33,7 @@ CREATE TABLE `articles` (
   `title` varchar(25) NOT NULL,
   `description` text NOT NULL,
   `text` text NOT NULL,
-  `alias` varchar(25) DEFAULT NULL,
   `img` varchar(500) NOT NULL,
-  `meta_key` varchar(50) DEFAULT NULL,
-  `meta_desc` varchar(100) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -45,14 +42,14 @@ CREATE TABLE `articles` (
 -- Dumping data for table `articles`
 --
 
-INSERT INTO `articles` (`id`, `title`, `description`, `text`, `alias`, `img`, `meta_key`, `meta_desc`, `created_at`, `updated_at`) VALUES
-(1, 'LLOYD', '1499 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'alias1', 'https://pngimage.net/wp-content/uploads/2018/06/%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B0%D0%BA%D0%B0%D1%81%D0%B8%D0%BD-png-.png', 'meta_key1', 'meta_desc1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 'LLOYD', '1750 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'alias2', 'https://pngimage.net/wp-content/uploads/2018/06/%D0%BC%D0%BE%D0%BA%D0%B0%D1%81%D0%B8%D0%BD%D1%8B-png-4.png', 'meta_key2', 'meta_desc2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, 'OLIVER', '1750 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'alias3', 'https://tyfli.com/uploads/133221.png', 'meta_key3', 'meta_desc3', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(4, 'RIEKER', '1350 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'alias4', 'https://obuv-nsk.com/thumb/2/sfd-v9RdglkBxzdbWiMfvg/r/d/581101sl800x600wpng.png', 'meta_key4', 'meta_desc4', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(5, 'RYLKO', '1200 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'alias5', 'https://tyfli.com/uploads/35793_456x456.png', 'meta_key5', 'meta_desc5', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(6, 'RIEKER', '1499 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'alias6', 'https://www.kavaler.ro/uploads/2019/06/503f2a78bfcf94e016e0c46d54ced1f0.png', 'meta_key6', 'meta_desc6', '0000-00-00 00:00:00', '2020-03-06 06:34:34'),
-(16, 'dasdas', 'dasdas', 'dasd', NULL, 'https://pngimage.net/wp-content/uploads/2018/06/%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B0%D0%BA%D0%B0%D1%81%D0%B8%D0%BD-png-.png', NULL, NULL, '2020-03-06 06:43:43', '2020-03-06 06:43:43');
+INSERT INTO `articles` (`id`, `title`, `description`, `text`, `img`, `created_at`, `updated_at`) VALUES
+(1, 'NIKE', '1499 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://pngimage.net/wp-content/uploads/2018/06/%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B0%D0%BA%D0%B0%D1%81%D0%B8%D0%BD-png-.png', '0000-00-00 00:00:00', '2020-03-06 07:24:27'),
+(2, 'LLOYD', '1750 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://pngimage.net/wp-content/uploads/2018/06/%D0%BC%D0%BE%D0%BA%D0%B0%D1%81%D0%B8%D0%BD%D1%8B-png-4.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'OLIVER', '1750 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://tyfli.com/uploads/133221.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'RIEKER', '1350 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://obuv-nsk.com/thumb/2/sfd-v9RdglkBxzdbWiMfvg/r/d/581101sl800x600wpng.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 'RYLKO', '1200 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://tyfli.com/uploads/35793_456x456.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 'ADIDAS', '1499 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://www.kavaler.ro/uploads/2019/06/503f2a78bfcf94e016e0c46d54ced1f0.png', '0000-00-00 00:00:00', '2020-03-06 07:30:51'),
+(17, 'das', 'das', 'das', 'https://www.kavaler.ro/uploads/2019/06/503f2a78bfcf94e016e0c46d54ced1f0.png', '2020-03-06 07:20:48', '2020-03-06 07:34:03');
 
 -- --------------------------------------------------------
 
@@ -164,7 +161,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
