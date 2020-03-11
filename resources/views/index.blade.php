@@ -27,7 +27,7 @@
 
     </div>
     <hr>
-  </div> <!-- /container -->
+  </div>
 </main>
 
 @endsection

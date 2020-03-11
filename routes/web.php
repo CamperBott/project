@@ -23,3 +23,7 @@ Route::delete('page/delete/{article}', function (\App\Article $article) {
 })->name('articleDelete');
 
 Route::resource('articles', 'ArticleController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
