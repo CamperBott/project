@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 10, 2020 at 01:24 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- Хост: 127.0.0.1
+-- Время создания: Мар 26 2020 г., 16:23
+-- Версия сервера: 10.4.8-MariaDB
+-- Версия PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `article`
+-- База данных: `article`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `articles`
+-- Структура таблицы `articles`
 --
 
 CREATE TABLE `articles` (
@@ -39,22 +39,21 @@ CREATE TABLE `articles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `articles`
+-- Дамп данных таблицы `articles`
 --
 
 INSERT INTO `articles` (`id`, `title`, `description`, `text`, `img`, `created_at`, `updated_at`) VALUES
-(1, 'NIKE', '1499 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://pngimage.net/wp-content/uploads/2018/06/%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B0%D0%BA%D0%B0%D1%81%D0%B8%D0%BD-png-.png', '0000-00-00 00:00:00', '2020-03-06 07:24:27'),
-(2, 'LLOYD', '1750 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://pngimage.net/wp-content/uploads/2018/06/%D0%BC%D0%BE%D0%BA%D0%B0%D1%81%D0%B8%D0%BD%D1%8B-png-4.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, 'OLIVER', '1750 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://tyfli.com/uploads/133221.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(4, 'RIEKER', '1350 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://obuv-nsk.com/thumb/2/sfd-v9RdglkBxzdbWiMfvg/r/d/581101sl800x600wpng.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(5, 'RYLKO', '1200 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://tyfli.com/uploads/35793_456x456.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(6, 'ADIDAS', '1499 lei', 'These men\'s moccasin boots are ankle high with a traditional Native style. They feature an added soft leather sole with a foam padded insole for added comfort. The men\'s handmade moccasins come in a maple tan color and have raw hide laces for tightening.', 'https://www.kavaler.ro/uploads/2019/06/503f2a78bfcf94e016e0c46d54ced1f0.png', '0000-00-00 00:00:00', '2020-03-06 07:30:51'),
-(17, 'das', 'das', 'das', 'https://www.kavaler.ro/uploads/2019/06/503f2a78bfcf94e016e0c46d54ced1f0.png', '2020-03-06 07:20:48', '2020-03-06 07:34:03');
+(1, 'NIKE', '1499 lei', 'Retro Tassel Loafers\r\nRed Suede', 'https://pngimage.net/wp-content/uploads/2018/06/%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B0%D0%BA%D0%B0%D1%81%D0%B8%D0%BD-png-.png', '0000-00-00 00:00:00', '2020-03-06 07:24:27'),
+(2, 'LLOYD', '1750 lei', 'Function Tassel Loafers\r\nRed Leather Snake Mix', 'https://pngimage.net/wp-content/uploads/2018/06/%D0%BC%D0%BE%D0%BA%D0%B0%D1%81%D0%B8%D0%BD%D1%8B-png-4.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'OLIVER', '1750 lei', 'Fanatic Pointed Fringe Loafers\r\nRed Leather', 'https://tyfli.com/uploads/133221.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'RIEKER', '1350 lei', 'Few Feature Trim Loafers\r\nGray Leather', 'https://obuv-nsk.com/thumb/2/sfd-v9RdglkBxzdbWiMfvg/r/d/581101sl800x600wpng.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 'RYLKO', '1200 lei', 'Retro Tassel Loafers\r\nBlack Snake Suede', 'https://tyfli.com/uploads/35793_456x456.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 'ADIDAS', '1499 lei', 'Flutter Loafers\r\nBlack Leather With Chain Rand', 'https://www.kavaler.ro/uploads/2019/06/503f2a78bfcf94e016e0c46d54ced1f0.png', '0000-00-00 00:00:00', '2020-03-13 17:22:02');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Структура таблицы `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -69,7 +68,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Структура таблицы `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -79,7 +78,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Дамп данных таблицы `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -92,7 +91,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Структура таблицы `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -101,10 +100,17 @@ CREATE TABLE `password_resets` (
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('sandugalagan1@gmail.com', '$2y$10$ewaDbhapCCT6DCghSgpVtORWV2pBzed1WpRnxqhLezS5JLUvAB8je', '2020-03-11 18:10:29');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Структура таблицы `users`
 --
 
 CREATE TABLE `users` (
@@ -119,67 +125,74 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Indexes for dumped tables
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'CamperBot', 'sandugalagan1@gmail.com', NULL, '$2y$10$S/aD7Cp6k3e8RW.DRcoive0KDC.FYlg7FS5kLq5I14720vh/eF4dS', 'u82YHUv7J9GQFi3c1RF3SuCpaRxNOaEKrghYGJMxo05cC1jBbfw42WtMinQd', '2020-03-11 15:12:57', '2020-03-11 15:12:57');
+
+--
+-- Индексы сохранённых таблиц
 --
 
 --
--- Indexes for table `articles`
+-- Индексы таблицы `articles`
 --
 ALTER TABLE `articles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `failed_jobs`
+-- Индексы таблицы `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Индексы таблицы `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Индексы таблицы `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `users`
+-- Индексы таблицы `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT для сохранённых таблиц
 --
 
 --
--- AUTO_INCREMENT for table `articles`
+-- AUTO_INCREMENT для таблицы `articles`
 --
 ALTER TABLE `articles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT для таблицы `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

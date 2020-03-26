@@ -1,6 +1,7 @@
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
   padding-top: 3.5rem;
+  background-color: #fafce6;
 }
 .links >a {
   color: rgb(46, 36, 36);
@@ -29,4 +30,9 @@ img{
 
 .form{
   width: 100%;
+}
+
+.copyright{
+  text-align: center;
+  padding-bottom: 30px;
 }

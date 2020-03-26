@@ -4,27 +4,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>MyPage</title>
+  <title>Hermes</title>
   <script src="{{ asset('js/app.js') }}" defer></script>
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{asset('css/jumbotron.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('https://www.w3schools.com/w3css/4/w3.css')}}">
+  <link rel="icon" href="/img/logo.png">
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #fafce1;">
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="/"><img src="/img/logo.png" alt="Hermes" style="width:100px;"></a>
       </div>
       <div class="links">
-        <a href="#">Page 1</a>
-        <a href="#">Page 2</a>
-        <a href="#">Page 3</a>
-        <a href="#">Contacts</a>
+        <a href="/">Home</a>
+        <a href="page1">Loafers</a>
+        <a href="contacts">Contacts</a>
       </div>
       <ul class="navbar-nav ml-auto">
         <!-- Authentication Links -->
@@ -69,6 +69,10 @@
     @endif
 
     @yield('content')
+<br><br><br><br><br>
+    <div class="container, copyright">
+      &copy 2020 Hermes, Inc
+    </div>
 </body>
 
 </html>

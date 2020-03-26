@@ -55,4 +55,21 @@ class IndexController extends Controller
 
         return redirect('/');
     }
+
+    public function page1()
+    {
+        $articles = Article::select(['title', 'description', 'img', 'id', 'text'])->get();
+        //dump($articles);
+        return view('page1')->with([
+            'articles' => $articles
+        ]);
+    }
+
+    public function contacts()
+    {
+        $articles = Article::select(['title', 'description', 'img', 'id', 'text'])->get();
+        return view('contacts')->with([
+            'articles'=>$articles
+        ]);
+    }
 }

@@ -27,3 +27,7 @@ Route::resource('articles', 'ArticleController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/page1', 'IndexController@page1')->name('page1');
+
+Route::get('/contacts', 'IndexController@contacts')->name('contacts');
